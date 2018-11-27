@@ -4,8 +4,8 @@ export default {
   fetchGoods () {
     return Api().get('/goods')
   },
-  postGood (good) {
-    return Api().post('/goods', good,
+  postGood (donation) {
+    return Api().post('/goods', donation,
       { headers: {'Content-type': 'application/json'} })
   }
 }

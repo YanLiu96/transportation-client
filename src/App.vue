@@ -8,7 +8,7 @@
         <b-navbar-nav>
           <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
           <b-nav-item to="/goods"><i class="fa fa-list" style="padding: 5px"> Manage Goods</i></b-nav-item>
-          <b-nav-item to="/donate"><i class="fa fa-money" style="padding: 5px"> Donate</i></b-nav-item>
+          <b-nav-item data-test="goodbtn" to="/addGood"><i class="fa fa-money" style="padding: 5px"> AddGood</i></b-nav-item>
           <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 5px"> Map</i></b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">

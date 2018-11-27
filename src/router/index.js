@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import SearchGoods from '@/components/SearchGoods'
-//import AddGood from '@/components/AddGood'
+const AddGood = () => import('@/components/AddGood');
 Vue.use(Router)
 
 export default new Router({
@@ -16,6 +16,11 @@ export default new Router({
       path: '/goods',
       name: 'SearchGoods',
       component: SearchGoods
+    },
+    {
+      path:'/addGood',
+      name:'AddGood',
+      component:AddGood
     }
   ]
 })

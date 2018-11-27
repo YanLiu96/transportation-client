@@ -16,21 +16,22 @@
   Vue.use(VueTables.ClientTable, {compileTemplates: true, filterByColumn: true})
 
   export default {
-    name: 'Goods',
+    name: 'goods',
     data () {
       return {
         messagetitle: ' Goods List ',
         goods: [],
         errors: [],
-        columns: ['_id', 'goodsName', 'goodsKind', 'freight','goodsLocation','deliveryman.deliverymanName'],
+        columns: ['_id', 'goodsName', 'goodsKind', 'freight','goodsLocation','deliveryman','deliverymanUpvotes'],
         options: {
           headings: {
             _id: 'ID',
-            goodsName: 'Good Name',
+            goodsName: 'Name',
             goodsKind: 'Good Kind',
             freight:"Freight",
-            goodsLocation:"Good Location",
-            deliverymanName:"Deliveryman",
+            goodsLocation:"Location",
+            deliveryman:"Deliveryman",
+            deliverymanUpvotes:"Upvote"
           }
         }
       }
