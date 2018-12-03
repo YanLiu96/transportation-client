@@ -29,8 +29,6 @@
       submitGood: function (good) {
         transportationservice.postGood(good)
           .then(response => {
-            console.log('submitGood!')
-            console.log('Submitting in submitGood : ' + good)
             console.log(response)
           })
           .catch(error => {

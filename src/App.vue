@@ -3,7 +3,7 @@
     <b-navbar toggleable="md" variant="dark" type="dark">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <img src="./assets/mevnnav.png" class="img-circle" style="padding: 5px">
-      <b-navbar-brand to="/">Donations Web App</b-navbar-brand>
+      <b-navbar-brand to="/">Express Transportation Web App</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
@@ -36,7 +36,39 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    color: #000000;
+  // color: #2c3e50;
+    padding-top: 20px;
+    background: url("./assets/homerbgyellow.png") no-repeat center top;
+  // background-size: cover;
+  // background-color: #f6d54f
+  }
+  button
+  {
+    margin:5px;
+  }
+
+  .b-nav-item {
+    color: white;
+    font-size: 30px;
+  }
+  .VueTables__child-row-toggler {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .VueTables__child-row-toggler--closed::before {
+    content: "+";
+  }
+
+  .VueTables__child-row-toggler--open::before {
+    content: "-";
+  }
+  .VueTables__sortable {
+    cursor: pointer;
   }
 </style>

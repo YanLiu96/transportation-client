@@ -9,10 +9,12 @@
         <option value="Fragile">Fragile</option>
       </select>
     </div>
+
     <div class="form-group" :class="{ 'form-group--error': $v.freight.$error }">
       <label class="form-control-label" name="freight">Freight (Enter a number between 1 and 1000)</label>
       <input data-test="freight" class="form__input"  v-model.trim="freight"/>
     </div>
+
     <div class="error" v-if="!$v.freight.between">ID must be between 1 and 1000</div>
 
     <div class="form-group" :class="{ 'form-group--error': $v.goodsName.$error }">
@@ -35,7 +37,6 @@
     </div>
     <div class="error" v-if="!$v.goodsLocation.required">Good Location is Required</div>
     <div class="error" v-if="!$v.goodsLocation.minLength">Good Location must have at least {{$v.message.$params.minLength.min}} letters.</div>
-
 
 
     <p>
@@ -143,7 +144,7 @@
     color: red;
     margin-left: 0.25rem;
   }
-  .donate-form .form-control-label.text-left{
+  .good-form .form-control-label.text-left{
     text-align: left;
   }
 
