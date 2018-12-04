@@ -24,6 +24,17 @@ describe("Manage Goods page", () => {
     cy.get('.navbar-nav:nth-child(1)').find('.nav-item:nth-child(2)').click()
   });
 
+  it("allows the deliveryman of a good to be upvoted", () => {
+    cy.get('tbody').find('tr:nth-child(1)').find('td:nth-child(7)').should('contain', 0)
+    cy.get('tbody').find('tr:nth-child(1)').find('td:nth-child(8)').click()
+    // Click confirmation button
+    cy.get('tbody').find('tr:nth-child(1)').find('td:nth-child(7)').should('contain', 1)
+  });
+
+  it("allows a good to be edited", () => {
+
+  });
+
   it("allows a good to be deleted", () => {
     cy.get('tbody').find('tr').should('have.length', 4)
     // Click trash/delete link of 3rd donation in list
