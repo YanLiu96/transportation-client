@@ -24,7 +24,7 @@
       return {
         messagetitle: ' Goods List ',
         goods: [],
-        proprs:['_id'],
+        props:['_id'],
         errors: [],
         columns: ['_id', 'goodsName', 'goodsKind', 'freight','goodsLocation','deliveryman','deliverymanUpvotes','upvote','edit','remove'],
         options: {
@@ -105,7 +105,7 @@
               })
           } else {
             console.log('SWAL Else Result : ' + result.value)
-            this.$swal('Cancelled', 'Your Donation still Counts!', 'info')
+            this.$swal('Cancelled', 'Your Good still Counts!', 'info')
           }
         })
       }
