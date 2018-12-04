@@ -1,0 +1,33 @@
+[{
+  "deliverymanUpvotes": 4,
+  "goodsName": "name1",
+  "deliveryman": "D1",
+  "freight": 12,
+  "goodsKind": "expensive",
+  "goodsLocation": "location1"
+},
+  {
+    "deliverymanUpvotes": 15,
+    "goodsName": "name2",
+    "deliveryman": "D2",
+    "freight": 16,
+    "goodsKind": "expensive",
+    "goodsLocation": "locaton2"
+  },
+  {
+    "deliverymanUpvotes": 10,
+    "goodsName": "name1",
+    "deliveryman": "D3",
+    "freight": 17,
+    "goodsKind": "expensive",
+    "goodsLocation": "location3"
+  },
+  {
+    "deliverymanUpvotes": 5,
+    "goodsName": "name1",
+    "deliveryman": "D4",
+    "freight": 18,
+    "goodsKind": "expensive",
+    "goodsLocation": "loacation4"
+  }
+]
