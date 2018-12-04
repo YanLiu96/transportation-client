@@ -7,6 +7,8 @@ import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
 import DMap from '@/components/DMap'
 import Edit from '@/components/Edit'
+import Login from '@/components/Login'
+import Logout from '@/components/Logout'
 Vue.use(Router)
 
 export default new Router({
@@ -46,6 +48,16 @@ export default new Router({
       path: '/map',
       name: 'Map',
       component: DMap
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/logout',
+      name: 'Logout',
+      component: Logout
     }
   ]
 })
