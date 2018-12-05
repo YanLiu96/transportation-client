@@ -43,6 +43,7 @@
 <style scoped>
   #app1 {
     width: 95%;
+    height: 80%;
     margin: 0 auto;
   }
   .vue-title {

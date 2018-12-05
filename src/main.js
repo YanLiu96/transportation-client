@@ -2,7 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import {router} from '@/router'
+import {store} from '@/store'
+import auth from '@/auth'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -12,6 +14,8 @@ import VueMq from 'vue-mq'
 import VueForm from 'vueform'
 import Vuelidate from 'vuelidate'
 import * as VueGoogleMaps from 'vue2-google-maps'
+
+Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
 Vue.use(VueTables.ClientTable, {compileTemplates: true, filterByColumn: true})
@@ -46,7 +50,11 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
-  components: { App },
-  template: '<App/>'
+  beforeCreate () {
+    auth.init(this)
+  },
+  template: '<App/>',
+  components: { App }
 })
