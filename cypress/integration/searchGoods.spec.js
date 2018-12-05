@@ -1,4 +1,4 @@
-describe("Manage Goods page", () => {
+describe("Manage Goods page", ()=> {
 
   beforeEach(() => {
     // Delete all donations in the API's datastore
@@ -32,6 +32,16 @@ describe("Manage Goods page", () => {
   });
 
   it("allows a good to be edited", () => {
+    cy.get('tbody').find('tr:nth-child(1)').find('td:nth-child(9)').click()
+    cy.get('#goodsKind').select('Soft')
+    cy.get('input[data-test=freight]').clear().type(1);
+    cy.get('label').contains('goodsName').next().clear().type('Test Name');
+    cy.get('label').contains('deliveryman').next().clear().type('Test deliveryman');
+    cy.get('label').contains('goodsLocation').next().clear().type('Test location');
+    cy.get('.error').should('not.exist')
+    cy.get(':nth-child(6)').find('.btn').click();
+    cy.contains('Add goods successfully!').should('exist');
+
 
   });
 
