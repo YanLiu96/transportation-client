@@ -15,7 +15,7 @@
       <input data-test="freight" class="form__input"  v-model.trim="freight"/>
     </div>
 
-    <div class="error" v-if="!$v.freight.between">ID must be between 1 and 1000</div>
+    <div class="error" v-if="!$v.freight.between">freight must be between 1 and 1000</div>
 
     <div class="form-group" :class="{ 'form-group--error': $v.goodsName.$error }">
       <label class="form__label">goodsName</label>
@@ -28,8 +28,8 @@
       <label class="form__label">deliveryman</label>
       <input class="form__input" v-model.trim="$v.deliveryman.$model"/>
     </div>
-    <div class="error" v-if="!$v.deliveryman.required">GoodsName is Required</div>
-    <div class="error" v-if="!$v.deliveryman.minLength">GoodsName must have at least {{$v.message.$params.minLength.min}} letters.</div>
+    <div class="error" v-if="!$v.deliveryman.required">Deliveryman man is Required</div>
+    <div class="error" v-if="!$v.deliveryman.minLength">Deliveryman name must have at least {{$v.message.$params.minLength.min}} letters.</div>
 
     <div class="form-group" :class="{ 'form-group--error': $v.goodsLocation.$error }">
       <label class="form__label">goodsLocation</label>
