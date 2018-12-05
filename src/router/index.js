@@ -10,8 +10,6 @@ import DMap from '@/components/DMap'
 import Edit from '@/components/Edit'
 import Auth from '@/components/Auth'
 import Dashboard from '@/components/dashboard'
-
-import Logout from '@/components/Logout'
 Vue.use(Router)
 
 var routes = [
@@ -50,11 +48,6 @@ var routes = [
     path: '/map',
     name: 'Map',
     component: DMap
-  },
-  {
-    path: '/logout',
-    name: 'Logout',
-    component: Logout
   },
   { path: '/auth',
     name: 'auth',

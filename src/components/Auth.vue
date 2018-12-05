@@ -11,7 +11,7 @@
   import auth from '@/auth'
 
   export default {
-    name: 'Login in',
+    name: 'Login In',
     mounted() {
       auth.authForm('#firebaseui-auth-container')
     },
