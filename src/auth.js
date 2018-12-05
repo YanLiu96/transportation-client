@@ -21,7 +21,7 @@ const auth = {
 
     firebase.initializeApp(config);
     this.uiConfig = {
-      signInSuccessUrl: 'dashboard',
+      signInSuccessUrl: '#',
       signInOptions: [
         firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,

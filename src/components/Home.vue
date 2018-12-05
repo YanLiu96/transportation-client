@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <h1 class="vue-title">Homer for President !!</h1>
+    <h1 class="vue-title">Search your express !!</h1>
 
     <table align="center">
       <tr>
@@ -11,20 +11,19 @@
           <p>the express page to search for your goods</p>
         </td>
         <td>
-          <img src="../assets/homer.gif" alt="description here" />
         </td>
       </tr>
     </table>
 
     <p></p>
-    <p class="lead">This is the homepage of your <b>MEVN</b> Web app</p>
+    <p class="lead">This assignment of web application2 of <b>Yan Liu</b></p>
   </div>
 </template>
 
 <style>
   .hero {
     height: 100vh;
-    margin-top: 30px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -39,6 +38,7 @@
   }
   .vue-title {
     font-size: 70pt;
+    color:cadetblue;
     margin-bottom: 10px;
   }
 </style>

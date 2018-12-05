@@ -39,7 +39,7 @@
     color: #000000;
   // color: #2c3e50;
     padding-top: 20px;
-    background: url("./assets/homerbgyellow.png") no-repeat center top;
+    background: url("./assets/background.png") no-repeat center top;
   // background-size: cover;
   // background-color: #f6d54f
   }
