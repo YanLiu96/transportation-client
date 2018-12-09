@@ -11,7 +11,7 @@
     </div>
 
     <div class="form-group" :class="{ 'form-group--error': $v.freight.$error }">
-      <label class="form-control-label" name="freight">Freight (Enter a number between 1 and 1000)</label>
+      <label class="form-control-label"  name="freight">Freight (Enter a number between 1 and 1000)</label>
       <input data-test="freight" class="form__input"  v-model.trim="freight"/>
     </div>
 
@@ -38,12 +38,11 @@
     <div class="error" v-if="!$v.goodsLocation.required">Good Location is Required</div>
     <div class="error" v-if="!$v.goodsLocation.minLength">Good Location must have at least {{$v.message.$params.minLength.min}} letters.</div>
 
-
     <p>
-      <button class="btn btn-primary btn1" type="submit" :disabled="submitStatus === 'PENDING'">Add Goods</button>
+      <button class="btn btn-primary btn1" type="submit" :disabled="submitStatus === 'PENDING'">{{goodBtnTitle}}</button>
     </p>
     <p>
-      <a href="#/goods" class="btn btn-primary btn1" role="button">Manage Goods</a>
+      <a href="/goods" class="btn btn-primary btn1" role="button">Manage Goods</a>
     </p>
     <p class="typo__p" v-if="submitStatus === 'OK'">Add goods successfully!</p>
     <p class="typo__p" v-if="submitStatus === 'ERROR'">Please Fill in the Form Correctly.</p>
@@ -72,12 +71,12 @@
     data () {
       return {
         messagetitle: 'Add Good',
-        goodsName:this.good.goodsName,
-        goodsKind:this.good.goodsKind,
+        goodsName: this.good.goodsName,
+        goodsKind: this.good.goodsKind,
         freight: this.good.freight,
-        goodsLocation:this.good.goodsLocation,
-        deliveryman:this.good.deliveryman,
-        deliverymanUpvotes:0,
+        goodsLocation: this.good.goodsLocation,
+        deliveryman: this.good.deliveryman,
+        deliverymanUpvotes: 0,
         submitStatus: null
       }
     },
@@ -86,15 +85,15 @@
         required,
         between: between(1, 1000)
       },
-      goodsName:{
+      goodsName: {
         required,
         minLength: minLength(1)
       },
-      goodsLocation:{
+      goodsLocation: {
         required,
         minLength: minLength(1)
       },
-      deliveryman:{
+      deliveryman: {
         required,
         minLength: minLength(1)
       }
@@ -111,19 +110,19 @@
           setTimeout(() => {
             this.submitStatus = 'OK'
             var good = {
-              goodsName:this.goodsName,
+              goodsName: this.goodsName,
               goodsKind: this.goodsKind,
               freight: this.freight,
-              goodsLocation:this.goodsLocation,
-              deliveryman:this.deliveryman,
-              deliverymanUpvotes:this.deliverymanUpvotes
+              goodsLocation: this.goodsLocation,
+              deliveryman: this.deliveryman,
+              deliverymanUpvotes: this.deliverymanUpvotes
             }
             this.good = good
             console.log('Submitting in GoodForm : ' + JSON.stringify(this.good, null, 5))
             this.$emit('good-is-created-updated', this.good)
           }, 500)
         }
-      },
+      }
     }
   }
 </script>
@@ -185,7 +184,7 @@
 
   .error {
     border-color: red;
-    background: #157ffb;
+    background: black;
     color: whitesmoke;
   }
 

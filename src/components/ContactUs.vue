@@ -1,6 +1,23 @@
 <template>
   <div class="hero">
     <h3 class="vue-title"><i class="fa fa-comment" style="padding: 3px"></i>{{messagetitle}}</h3>
+    <br>
+    <table align="center">
+      <tr>
+        <td>
+          <p class="lead"><p><i>My Github account name is YanLiu96  </i></p>
+          <p class="lead"><p><i>My facebook account name is 刘岩 </i></p>
+          <p class="lead"><p><i>My email is 20082245@mail.wit.ie </i></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="lead"><p><i>Please click <a href ="https://github.com/YanLiu96">My GitHub</a> to follow me (^o^)</i></p>
+          <p class="lead"><p><i>Just contact me if you have any problems</i></p>
+          <p class="lead"><p><i>Please email me during 9:00 am and 22:00 pm</i></p>
+        </td>
+      </tr>
+    </table>
     <dfooter></dfooter>
   </div>
 </template>

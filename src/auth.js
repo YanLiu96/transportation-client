@@ -2,7 +2,7 @@ import firebase from 'firebase'
 import firebaseui from 'firebaseui';
 
 const config = {
-  apiKey: "AIzaSyCieb_pA0XG0LXywOUlZsRXUHFWNDWWtPY",
+  apiKey: "AIzaSyDKPbCb93kglcqmw4rAQpYOToRGcSIZGlQ",
   authDomain: "exprees-transportation-vue.firebaseapp.com",
   databaseURL: "https://exprees-transportation-vue.firebaseio.com",
   projectId: "exprees-transportation-vue",

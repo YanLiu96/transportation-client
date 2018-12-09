@@ -1,22 +1,19 @@
 <template>
   <div class="hero">
-    <h1 class="vue-title">Search your express !!</h1>
+    <h1 class="vue-title">Manage your express</h1>
 
     <table align="center">
       <tr>
         <td>
-          <p class="lead"><b><i>Time for a change !!</i></b>
-          <p>Out with Boring Prumt - Giving has never been so easy.</p>
-          <p>Just click <a href ="#/addGood">here</a> to go to</p>
-          <p>the express page to search for your goods</p>
-        </td>
-        <td>
+          <p class="lead"><b><i>Enjoy convenient management of express</i></b>
+          <p></p>
+          <p class ="smallTittle">Just click <a href ="/addGood">here</a> to go to</p>
+          <p class ="smallTittle">the page to search for your express</p>
         </td>
       </tr>
     </table>
-
-    <p></p>
-    <p class="lead">This assignment of web application2 of <b>Yan Liu</b></p>
+    <br><br><br><br>
+    <p class="lead">Assignment finished by <b>Yan Liu 20082245</b></p>
   </div>
 </template>
 
@@ -29,8 +26,13 @@
     text-align: center;
   }
   .hero .lead {
+    color: whitesmoke;
     font-weight: 200;
     font-size: 2.5rem;
+  }
+  .hero .smallTittle {
+    color: whitesmoke;
+    font-size: 1.5rem;
   }
   #app1 {
     width: 60%;
@@ -38,7 +40,7 @@
   }
   .vue-title {
     font-size: 70pt;
-    color:cadetblue;
+    color: #fbfbff;
     margin-bottom: 10px;
   }
 </style>

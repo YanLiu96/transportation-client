@@ -1,31 +1,20 @@
 <template>
   <div id="app1" class="hero">
     <h3 class="vue-title"><i class="fa fa-sign-in" style="padding: 3px"></i>{{messagetitle}}</h3>
-    <br>
-    <br>
+    <br><br><br>
     <div id="firebaseui-auth-container"></div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br><br><br><br><br>
     <br>
     <br>
   </div>
 </template>
-
 
 <script>
   import auth from '@/auth'
 
   export default {
     name: 'Login',
-    mounted() {
+    mounted () {
       auth.authForm('#firebaseui-auth-container')
     },
     data () {
@@ -53,6 +42,5 @@
     font-size: 45pt;
     margin-bottom: 10px;
   }
-
 
 </style>

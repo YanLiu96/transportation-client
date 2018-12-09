@@ -39,8 +39,8 @@ Vue.use(VueSweetalert2)
 
 Vue.use(VueGoogleMaps, {
   load: {
-  //  key: 'AIzaSyD3rPvg_QujDEzu48GNdtXVduhLKr4PDrI',
-    key: 'AIzaSyABXHeA8gnGVqT5qP_BWUlRMMKHjFbZO74',
+    key: 'AIzaSyDKPbCb93kglcqmw4rAQpYOToRGcSIZGlQ',
+    //key: 'AIzaSyBxbmClEPJhz6_ngWRaGRxDGA5Lc13bWVE',
     libraries: 'places' // This is required if you use the Autocomplete plugin
   }
 })

@@ -36,11 +36,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #000000;
+    color: white;
   // color: #2c3e50;
     padding-top: 20px;
     background: url("./assets/background.png") no-repeat center top;
-  // background-size: cover;
+    background-size: cover;
   // background-color: #f6d54f
   }
   button

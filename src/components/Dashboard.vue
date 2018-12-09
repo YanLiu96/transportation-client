@@ -1,44 +1,30 @@
 
 <template>
   <div id="app1" class="hero">
-  <div v-if="user">
-    <h1>Hello USER!</h1>
-    <br>
-    <br>
-    <br>
-    <img :src="user.photoURL" width="100"> <br>
-    <h2>{{user.displayName}}</h2>
-    <p>{{user.email}}</p>
-    <button @click="logOut">Log out</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br><br>
-  </div>
+    <div v-if="user">
+      <h1>Hello USER!</h1>
+      <br><br><br>
+      <img :src="user.photoURL" width="100"> <br>
+      <h2>{{user.displayName}}</h2>
+      <p>{{user.email}}</p>
+      <button @click="logOut">Log out</button>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br>
+    </div>
   </div>
 </template>
 
 <script>
   import auth from '@/auth'
-
   export default {
     name: 'auth-success',
     computed: {
-      user() {
+      user () {
         return this.$store.getters['user/user']
       }
     },
     methods: {
-      logOut() {
+      logOut () {
         auth.logout()
       }
     }

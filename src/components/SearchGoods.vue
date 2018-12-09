@@ -16,7 +16,7 @@
   import Vue from 'vue'
   import VueTables from 'vue-tables-2'
 
-  Vue.use(VueTables.ClientTable, {compileTemplates: true, filterByColumn: true})
+  Vue.use(VueTables.ClientTable, { compileTemplates: true, filterByColumn: true })
 
   export default {
     name: 'goods',
@@ -24,21 +24,21 @@
       return {
         messagetitle: ' Goods List ',
         goods: [],
-        props:['_id'],
+        props: ['_id'],
         errors: [],
-        columns: ['_id', 'goodsName', 'goodsKind', 'freight','goodsLocation','deliveryman','deliverymanUpvotes','upvote','edit','remove'],
+        columns: ['_id', 'goodsName', 'goodsKind', 'freight', 'goodsLocation', 'deliveryman', 'deliverymanUpvotes', 'upvote', 'edit', 'remove'],
         options: {
-          perPage:10,
-          filterable: ['goodsName', 'goodsKind', 'freight','goodsLocation','deliverymanUpvotes'],
-          sortable:['deliverymanUpvotes'],
+          perPage: 8,
+          filterable: ['goodsName', 'goodsKind', 'freight', 'goodsLocation', 'deliverymanUpvotes'],
+          sortable: ['deliverymanUpvotes'],
           headings: {
             _id: 'ID',
             goodsName: 'Name',
             goodsKind: 'Good Kind',
-            freight:"Freight",
-            goodsLocation:"Location",
-            deliveryman:"Deliveryman",
-            deliverymanUpvotes:"Upvotes Of Deliveryman"
+            freight: 'Freight',
+            goodsLocation: 'Location',
+            deliveryman: 'Deliveryman',
+            deliverymanUpvotes: 'Upvotes Of Deliveryman'
           }
         }
       }

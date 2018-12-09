@@ -4,7 +4,8 @@
     <div class="container mt-3 mt-sm-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <good-form :good ="good" goodBtnTitle="Add Good" @good-is-created-updated="submitGood"></good-form>
+          <good-form  :good ="good" goodBtnTitle="Add Good"
+                      @good-is-created-updated="submitGood"></good-form>
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->
@@ -18,12 +19,12 @@
   export default {
     data () {
       return {
-        good: {goodsKind:'Expensive', goodsName:'',freight:0,goodsLocation: ''},
+        good: { goodsKind: 'Expensive', goodsName: '', freight: 0, goodsLocation: '' },
         messagetitle: ' Add Good '
       }
     },
     components: {
-      'good-form': GoodForm,
+      'good-form': GoodForm
     },
     methods: {
       submitGood: function (good) {
@@ -42,8 +43,8 @@
 
 <style scoped>
   #app1 {
-    width: 95%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
   }
   .vue-title {
@@ -52,4 +53,5 @@
     font-size: 45pt;
     margin-bottom: 10px;
   }
+
 </style>

@@ -2,6 +2,6 @@ import axios from 'axios'
 
 export default() => {
   return axios.create({
-    baseURL: 'https://express-transportation.herokuapp.com/'
+    baseURL: 'https://express-transportation-server.herokuapp.com/'
   })
 }

@@ -5,7 +5,8 @@
       <div class="row justify-content-center">
         <div class="col-md-6">
           <template v-if="childDataLoaded">
-            <good-form :good="good" goodBtnTitle="Update Good" @good-is-created-updated="updateGood"></good-form>
+            <good-form :good="good" goodBtnTitle="Update Good"
+                       @good-is-created-updated="updateGood"></good-form>
           </template>
         </div><!-- /col -->
       </div><!-- /row -->
@@ -26,7 +27,7 @@
       }
     },
     components: {
-      'good-form': GoodForm,
+      'good-form': GoodForm
     },
     created () {
       this.getGood()
