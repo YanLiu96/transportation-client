@@ -9,7 +9,7 @@ import ContactUs from '@/components/ContactUs'
 import DMap from '@/components/DMap'
 import Edit from '@/components/Edit'
 import Auth from '@/components/Auth'
-import Dashboard from '@/components/dashboard'
+import Dashboard from '@/components/Dashboard'
 Vue.use(Router)
 
 var routes = [
