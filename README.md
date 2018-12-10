@@ -23,7 +23,7 @@ Manage Goods page
 
 + URL of the Travis build page for the Vue app, e.g.
 
-  https://travis-ci.com/YanLiu96/AgileSoftwareAssignment2
+  https://travis-ci.org/YanLiu96/AgileSoftwareAssignment2
 
 ## Automated Deployment.
 
