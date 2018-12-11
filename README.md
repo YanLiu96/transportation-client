@@ -21,7 +21,11 @@ Manage Goods page
 
 ## Continuous Integration.
 
-+ URL of the Travis build page for the Vue app, e.g.
++ URL of Github repository
+
+  https://github.com/YanLiu96/AgileSoftwareAssignment2
+
++ URL of the Travis build page for the Vue app.
 
   https://travis-ci.org/YanLiu96/AgileSoftwareAssignment2
 
