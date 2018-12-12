@@ -4,7 +4,7 @@ describe('Home page', () => {
   })
 
   it('Shows a header and Words in home page', () => {
-    cy.get('.vue-title').should('contain', 'Manage your express')
+    cy.get('.vue-title').should('contain', 'Manage express')
     cy.get('.lead').should('contain', 'Enjoy convenient management of express')
     cy.get('.smallTittle').should('contain', 'Just click here to go to')
     cy.get('.smallTittle').should('contain', 'the page to search for your express')

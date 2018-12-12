@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <h1 class="vue-title">Manage your express</h1>
+    <h1 class="vue-title">Manage express</h1>
 
     <table align="center">
       <tr>
