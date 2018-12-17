@@ -2,27 +2,28 @@
   <div id="app">
     <b-navbar toggleable="md" variant="dark" type="dark">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <img src="./assets/mevnnav.png" class="img-circle" style="padding: 5px">
+      <img src="./assets/mevnnav.png" class="img-circle" style="padding: 10px">
       <b-navbar-brand to="/">Express Transportation Web App</b-navbar-brand>
+
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
-          <b-nav-item to="/goods"><i class="fa fa-list" style="padding: 5px"> Manage Goods</i></b-nav-item>
-          <b-nav-item data-test="goodbtn" to="/addGood"><i class="fa fa-money" style="padding: 5px"> AddGood</i></b-nav-item>
-          <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 5px"> Map</i></b-nav-item>
-        </b-navbar-nav>
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/about"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
-          <b-nav-item to="/contact"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
-          <b-nav-item to="/auth"><i class="fa fa-sign-in" style="padding: 5px"> Login </i></b-nav-item>
-          <b-nav-item to="/dashboard"><i class="fa fa-sign-out" style="padding: 5px"> Logout </i></b-nav-item>
-          <div v-if="user">
-            <img :src="user.photoURL" width="30">
+          <b-nav-item to="/#"><i class="fa fa-home" style="padding: 10px; font-size: 18px"> Home</i></b-nav-item>
+          <b-nav-item to="/goods"><i class="fa fa-list" style="padding: 10px; font-size: 18px"> AllGoods</i></b-nav-item>
+          <b-nav-item data-test="goodbtn" to="/addGood"><i class="fa fa-money" style="padding: 10px; font-size: 18px"> AddGood</i></b-nav-item>
+          <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 10px; font-size: 18px"> Map</i></b-nav-item>
+
+          <b-nav-item to="/about"><i class="fa fa-info" style="padding: 10px; font-size: 18px"> AboutUs</i></b-nav-item>
+          <b-nav-item to="/contact"><i class="fa fa-comment" style="padding: 10px; font-size: 18px"> ContactUs</i></b-nav-item>
+          <b-nav-item to="/auth"><i class="fa fa-sign-in" style="padding: 10px; font-size: 18px"> Login </i></b-nav-item>
+          <b-nav-item to="/dashboard"><i class="fa fa-sign-out" style="padding: 10px; font-size: 18px"> Logout </i></b-nav-item>
+          <div v-if="user" style="color:yellow;font-size: 10px;padding: 10px">
+            <img :src="user.photoURL" width="40">
             <br>
-            <h8>{{user.displayName}}</h8>
+            {{user.displayName}}
           </div>
         </b-navbar-nav>
       </b-collapse>
+
     </b-navbar>
     <router-view/>
   </div>
