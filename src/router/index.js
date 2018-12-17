@@ -21,7 +21,8 @@ var routes = [
   {
     path: '/goods',
     name: 'SearchGoods',
-    component: SearchGoods
+    component: SearchGoods,
+    meta: { requireAuth: true }
   },
   {
     path:'/addGood',
@@ -31,7 +32,7 @@ var routes = [
   {
     path:'/edit',
     name:'Edit',
-    component:Edit,
+    component:Edit,meta: { requireAuth: true },
     props:true
   },
   {

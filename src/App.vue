@@ -16,7 +16,12 @@
           <b-nav-item to="/contact"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
           <b-nav-item to="/auth"><i class="fa fa-sign-in" style="padding: 5px"> Login </i></b-nav-item>
           <b-nav-item to="/dashboard"><i class="fa fa-sign-out" style="padding: 5px"> Logout </i></b-nav-item>
-          <i class="fa fa-pied-piper-alt fa-1x" style="padding: 5px; color: white;"></i>
+          <i class="fa fa-pied-piper-alt fa-1x" style="padding: 5px; color: white;"> </i>
+          <div style="color: white; font-size: 10px;">
+            <div v-if="user">
+            <img :src="user.photoURL" width="20">
+            </div>>
+          </div>>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
