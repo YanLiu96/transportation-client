@@ -16,12 +16,11 @@
           <b-nav-item to="/contact"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
           <b-nav-item to="/auth"><i class="fa fa-sign-in" style="padding: 5px"> Login </i></b-nav-item>
           <b-nav-item to="/dashboard"><i class="fa fa-sign-out" style="padding: 5px"> Logout </i></b-nav-item>
-          <i class="fa fa-pied-piper-alt fa-1x" style="padding: 5px; color: white;"> </i>
-          <div style="color: white; font-size: 10px;">
-            <div v-if="user">
-            <img :src="user.photoURL" width="20">
-            </div>>
-          </div>>
+          <div v-if="user">
+            <img :src="user.photoURL" width="30">
+            <br>
+            <h8>{{user.displayName}}</h8>
+          </div>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -31,7 +30,12 @@
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+    computed: {
+      user() {
+        return this.$store.getters['user/user']
+      }
+    }
   }
 </script>
 
@@ -52,7 +56,9 @@
   {
     margin:5px;
   }
-
+  img {
+    border-radius: 50px;
+  }
   .b-nav-item {
     color: white;
     font-size: 30px;
