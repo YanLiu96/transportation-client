@@ -1,8 +1,8 @@
 <template>
   <div>
     <div>
-      <h2>Search and add your location</h2>
-      <label>
+      <h2 align="center">Search and add your location</h2>
+      <label >
         <gmap-autocomplete
           @place_changed="setPlace">
         </gmap-autocomplete>

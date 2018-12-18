@@ -21,12 +21,11 @@ var routes = [
   {
     path: '/goods',
     name: 'SearchGoods',
-    component: SearchGoods,
-    meta: { requireAuth: true }
+    component: SearchGoods
   },
   {
     path:'/addGood',
-    name:'AddGood',
+    name:'AddGood',meta: { requireAuth: true },
     component:AddGood
   },
   {

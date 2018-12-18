@@ -124,4 +124,10 @@
     font-size: 45pt;
     margin-bottom: 10px;
   }
+  .hero{
+    text-align: center;
+    background: url("../assets/background.png") no-repeat center top;
+    padding-top: 20px;
+    background-size: cover;
+  }
 </style>

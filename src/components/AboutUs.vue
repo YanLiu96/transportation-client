@@ -9,6 +9,7 @@
     <br><br><br>
     <p>It references from ddrohan. You can click on this URL to learn it. </p>
     <p> <a target="_blank" href="https://ddrohan.github.io/wit-wad-2-2018/">Link URL</a></p>
+    <br><br><br>
   </div>
 </template>
 
@@ -29,5 +30,11 @@
     text-align: center;
     font-size: 45pt;
     margin-bottom: 10px;
+  }
+  .hero{
+    text-align: center;
+    background: url("../assets/background.png") no-repeat center top;
+    padding-top: 20px;
+    background-size: cover;
   }
 </style>

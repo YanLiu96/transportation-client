@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div id="app1" class="hero">
     <h3 class="vue-title"><i class="fa fa-comment" style="padding: 3px"></i>{{messagetitle}}</h3>
     <br>
     <table align="center">
@@ -19,6 +19,7 @@
       </tr>
     </table>
     <dfooter></dfooter>
+    <br><br><br><br><br><br><br><br>
   </div>
 </template>
 
@@ -44,5 +45,17 @@
     text-align: center;
     font-size: 45pt;
     margin-bottom: 10px;
+  }
+  #app1 {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("../assets/background.png") no-repeat center top;
+    padding-top: 20px;
+    background-size: cover;
+
+  }
+  .hero{
+    text-align: center;
   }
 </style>

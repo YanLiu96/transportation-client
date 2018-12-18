@@ -7,6 +7,10 @@
         <option value="Expensive">Expensive</option>
         <option value="Soft">Soft</option>
         <option value="Fragile">Fragile</option>
+        <option value="Fragile">Liquid</option>
+        <option value="Fragile">Powder</option>
+        <option value="Fragile">File</option>
+        <option value="Fragile">Emergency</option>
       </select>
     </div>
 

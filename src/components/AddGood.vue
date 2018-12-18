@@ -4,7 +4,7 @@
     <div class="container mt-3 mt-sm-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <good-form  :good ="good" goodBtnTitle="Add Good"
+          <good-form  align="center" :good ="good" goodBtnTitle="Add Good"
                       @good-is-created-updated="submitGood"></good-form>
         </div><!-- /col -->
       </div><!-- /row -->
@@ -46,6 +46,9 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    background: url("../assets/background.png") no-repeat center top;
+    padding-top: 20px;
+    background-size: cover;
   }
   .vue-title {
     margin-top: 30px;
@@ -53,5 +56,4 @@
     font-size: 45pt;
     margin-bottom: 10px;
   }
-
 </style>

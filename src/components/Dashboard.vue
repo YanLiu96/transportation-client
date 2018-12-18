@@ -49,8 +49,12 @@
   }
 
   #app1 {
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
+    background: url("../assets/background.png") no-repeat center top;
+    padding-top: 20px;
+    background-size: cover;
+    text-align: center;
   }
 </style>
