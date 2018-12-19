@@ -8,6 +8,10 @@
 
 This vue app is a client of express-transportation website, which aims to help people manage express transportation. Users can search express information or add or delete or edit express(only when user login).
 
+### Related URL Link
+
+Youtube link: https://youtu.be/35GRtpp-jC0
+
 ## 2. Description of functionality
 
 ### ① server
@@ -137,9 +141,7 @@ I deploy my server to heroku by using github connection. You can see the environ
 
 + Github api : login auth
 
-## 3. UML Diagrams
-
-## 4. Database Schemas
+## 3. Database Schemas
 
 ```javascript
 let GoodSchema = new mongoose.Schema({
