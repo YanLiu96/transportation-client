@@ -18,13 +18,13 @@ describe('Home page', () => {
       cy.get('.navbar').contains('Home')
       cy.get('.navbar-nav:nth-child(1)').within(() => {
         cy.get('.nav-item:first').should('contain', 'Home')
-        cy.get('.nav-item:nth-child(2)').should('contain', 'Manage Goods')
-        cy.get('.nav-item:nth-child(3)').should('contain', 'AddGood')
+        cy.get('.nav-item:nth-child(2)').should('contain', 'SearchExpress')
+        cy.get('.nav-item:nth-child(3)').should('contain', 'AddExpress')
         cy.get('.nav-item:nth-child(4)').should('contain', 'Map')
       })
       cy.get('.navbar-nav:nth-child(2)').within(() => {
         cy.get('.nav-item:first').should('contain', 'About')
-        cy.get('.nav-item:nth-child(2)').should('contain', 'Contact Us')
+        cy.get('.nav-item:nth-child(2)').should('contain', 'ContactUs')
         cy.get('.nav-item:nth-child(3)').should('contain', 'Login')
         cy.get('.nav-item:nth-child(4)').should('contain', 'Logout')
       })
@@ -34,16 +34,16 @@ describe('Home page', () => {
       cy.get('.navbar').contains('Home').click()
       cy.url().should('include', '/')
 
-      cy.get('.navbar').contains('Manage Goods').click()
+      cy.get('.navbar').contains('SearchExpress').click()
       cy.url().should('include', '/goods')
 
       cy.get('[data-test=goodbtn]').click()
-      cy.url().should('include', '/addGood')
+      cy.url().should('include', '/auth')
 
       cy.get('.navbar').contains('Map').click()
       cy.url().should('include', '/map')
 
-      cy.get('.navbar').contains('Contact Us').click()
+      cy.get('.navbar').contains('ContactUs').click()
       cy.url().should('include', '/contact')
 
       cy.get('.navbar').contains('Login').click()

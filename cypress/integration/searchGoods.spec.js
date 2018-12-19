@@ -30,17 +30,6 @@ describe('Manage Goods page', () => {
     cy.get('tbody').find('tr:nth-child(3)').find(':nth-child(7)').should('contain', 11)
   })
 
-  it('allows a good to be edited', () => {
-    cy.get('tbody').find('tr:nth-child(1)').find('td:nth-child(9)').click()
-    cy.get('#goodsKind').select('Soft')
-    cy.get('input[data-test=freight]').clear().type(1)
-    cy.get('label').contains('goodsName').next().clear().type('Test Name')
-    cy.get('label').contains('deliveryman').next().clear().type('Test deliveryman')
-    cy.get('label').contains('goodsLocation').next().clear().type('Test location')
-    cy.get('.error').should('not.exist')
-    cy.get(':nth-child(6)').find('.btn').click()
-    cy.contains('Add goods successfully!').should('exist')
-  })
 
   it('allows a good to be deleted', () => {
     cy.get('tbody').find('tr').should('have.length', 4)

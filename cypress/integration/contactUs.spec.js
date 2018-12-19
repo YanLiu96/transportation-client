@@ -1,7 +1,7 @@
 describe('Contact us page', () => {
   beforeEach(() => {
     cy.visit('/')
-    cy.get('.navbar').contains('Contact Us').click()
+    cy.get('.navbar').contains('ContactUs').click()
   })
 
   it('Shows a header and Words in contact us page', () => {

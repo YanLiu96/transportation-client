@@ -1,7 +1,7 @@
 describe('About us page', () => {
   beforeEach(() => {
     cy.visit('/')
-    cy.get('.navbar').contains('About Us').click()
+    cy.get('.navbar').contains('AboutUs').click()
   })
 
   it('Shows a header and information in about us page', () => {
