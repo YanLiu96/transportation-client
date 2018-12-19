@@ -12,6 +12,8 @@ This vue app is a client of express-transportation website, which aims to help p
 
 Youtube link: https://youtu.be/35GRtpp-jC0
 
+Project Demo (deployment) link is: https://exprees-transportation-vue.firebaseapp.com
+
 ## 2. Description of functionality
 
 ### ① server
@@ -110,10 +112,6 @@ I deploy my server to heroku by using github connection. You can see the environ
 + After login, users will turn to the page which show their information: name,photo,email.
 
 #### Continuous Integration and Test results of client
-
-+ URL of github of this client
-
-
 
 + URL of the Travis  page for web client.
 
