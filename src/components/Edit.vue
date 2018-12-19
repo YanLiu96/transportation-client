@@ -64,9 +64,13 @@
 
 <style scoped>
   #app1 {
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
+    text-align: center;
+    background: url("../assets/background.png") no-repeat center top;
+    padding-top: 20px;
+    background-size: cover;
   }
   .vue-title {
     margin-top: 30px;

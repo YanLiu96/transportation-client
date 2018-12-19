@@ -8,7 +8,7 @@ export default class Moon {
 	draw() {
 		let ctx = this.ctx,
 			gradient = ctx.createRadialGradient(100, 100, 60, 200, 200, 600)
-			//月亮
+			//moon
 			// gradient.addColorStop(0, 'rgba(255,255,255,0.5)')
 			// gradient.addColorStop(0.01, 'rgb(70,70,80)')
 			// gradient.addColorStop(0.2, 'rgb(40,40,50)')

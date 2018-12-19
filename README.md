@@ -1,116 +1,174 @@
-# Assignment 2 - Vue app - Automated development process.
+# Express transportation webapp design document
 
-Name: Yan Liu
+## Yan Liu
 
-Student No.:  20082245
+## 20082245
 
-## Overview.
+## 1. Overview
 
-This vue app is a client of express-transportation website, which aims to help people manage express transportation. Users can search express (there called goods cause express is a keyword ) information or add or delete or edit express.
+This vue app is a client of express-transportation website, which aims to help people manage express transportation. Users can search express information or add or delete or edit express(only when user login).
 
-## E2E Testing.
+## 2. Description of functionality
 
-```javacript
-$ npx cypress run --spec cypress/integration/donations.spec.js
+### ① server
 
-Manage Goods page
-    ✓ allows the deliveryman of a good to be upvoted (15954ms)
-    ✓ allows a good to be edited (5588ms)
-    ✓ allows a good to be deleted (3432ms)
+#### endpoints
+
+Goods
+
+ + GET /goods - Get all express (goods) information.
+ + Get /goods/:id - Get one good information by ID.
+ + GET /goods/findTotalVotes/ - Get the sum of votes for a deliveryman.
+ + POT /goods/ - Post a good information
+ + put /goods/:id - Edit a good information
+ + PUT /goods/:id/changeLocation/:location - Change good location
+ + put /goods/:id/voteForDeliveryman - Upvote for deliveryman
+ + Delete /goods/:id - Delete a good information
+
+Senders
+
++ Get /senders - Get all senders information.
++ Get /senders/:id - Get one sender information by ID
++ POT /senders/ - Post a good information
++ Delete /senders/:id - Delete a sender information
+
+Receivers
+
++ Get /receivers - Get all receivers information.
++ Get /receivers/:id - Get one receiver information by ID
++ POT /receivers/ - Post a good information
++ Delete /receivers/:id - Delete a sender information
++ Put /receivers/:id/changePhoneNumber/:phoneNumber - Change the phone number of receiver
++ Put /receivers/:id/changeAddress/:address - Change the address of receiver
+
+FuzzySearch
+
++ Get /fuzzySearch/:keyword - Fuzzy search record by keyword in goods or senders or receivers information.
+
+#### Continuous Integration and Test results.
+
++ URL of the Travis build page for web API.
+
+  https://travis-ci.org/YanLiu96/AgileSoftwarePracticeAssignment1
+
+
++ URL of published test coverage results on Coveralls.  
+
+  https://coveralls.io/github/YanLiu96/AgileSoftwarePracticeAssignment1
+
++ URL of github of this webAPI
+
+  https://github.com/YanLiu96/AgileSoftwarePracticeAssignment1
+
+
+#### Extra features.
+
+##### 1. Build automation and Continuous Integration 
+
+I use git branch called development connect with travis. In this branch i use npm scripts to perform transpilitation, linting, watching, etc.You can see my pack,json in development branch in github above. Just like below.
+
+```javascipt
+"scripts": {
+    "server": "cross-env NODE_ENV=dev PORT=3000 node lib/bin/www",
+    "start": "npm-run-all test build server",
+    "postbuild": "npm run server",
+    "prebuild": "npm-run-all test clean",
+    "lint": "esw  ./test ./routes ./models/ app.js",
+    "lint:watch": "npm run lint -- --watch",
+    "build": "babel ./ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./test --copy-files",
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/*.js",
+    "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/*.js",
+    "publish-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test:watch": "npm run test -- --watch",
+    "clean": "rimraf ./lib && mkdir lib",
+    "server:watch": "cross-env NODE_ENV=dev nodemon --exec babel-node bin/www"
+  },
 ```
 
-## Continuous Integration.
+##### 2. Auto-Deploying
 
-+ URL of Github repository
+I deploy my server to heroku by using github connection. You can see the environments section in my github above. It will show `Deployed to express-transportation-server`. In the heroku deploy section. I choose `Wait for CI to pass before deploy`, which base on Continuous Integration service configured on my project.
 
-  https://github.com/YanLiu96/AgileSoftwareAssignment2
+### ② client
 
-+ URL of the Travis build page for the Vue app.
++ It has home page, search express page, express page, map page, about us page, contact us page, login page, logout page.
+
++ Use canvas in the home page. It shows meteors slide past and twinkling stars.
+
++ User can visit search express page and they can search express,upvote for deliveryman  but can not edit the information.
+
++ User can not visit add express page without login.
+
++ User can use map page to get the location.
+
++ User can login by google, github, facebook, email. Then they can use all the function in this website.
+
++ After login, users will turn to the page which show their information: name,photo,email.
+
+#### Continuous Integration and Test results of client
+
++ URL of github of this client
+
+
+
++ URL of the Travis  page for web client.
 
   https://travis-ci.org/YanLiu96/AgileSoftwareAssignment2
 
-## Automated Deployment.
+### ③ specific frameworks
 
-+ Surge
++ this project adopts `node express + mongodb + vue` full-stack development frameworks.
 
-  http://express-transportation-vue.surge.sh/
++ the server adopts `mlab database icloud to store data + heroku icloud to deploy server + github to store code which connect with heroku to make automated deployment`.
 
-+ Firebase 
++ canvas+vue to make page dynamic and become animation.
 
-  https://exprees-transportation-vue.firebaseapp.com/
++ the clirnt adopts `firebase auth ui + firebase host to deploy + vuex to store user information + css style + cypress to test`.
 
-## Extra features.
+### ④ 3rd party api
 
-+ Login by using firebase console
++ Google Api :identity Toolkit API 、Token Service API
 
-  Use facebook, google, github, email to login to realzie Authentication. Firebase console will help me manage the users automated.
++ Google Maps JavaScript API
 
-+ Firebase Automated Deployment
-  
-  Aftering build the project, I deploy this client by using firebase host.
++ Facaebook Api : login auth
 
-+ Google Map
++ Google api: google account,email login auth
 
-  Use google map in this project. But only can be use once every day because i dont add billing.
++ Github api : login auth
 
-+ Production-related Bundling
-  
-  Use custom-build to generate ./dist folder.
+## 3. UML Diagrams
 
-## Appendix.
-
-A listing of the output
-
-     $ npx cypress run
+## 4. Database Schemas
 
 ```javascript
- Home page
-    ✓ Shows a header and Words in home page (13696ms)
-    Navigation bar
-      ✓ Shows the required links (1812ms)
-      ✓ Redirects when links are clicked (1554ms)
+let GoodSchema = new mongoose.Schema({
+    goodsName: String,
+    goodsKind:String,
+    freight:Number,
+    deliveryman:String,
+    deliverymanUpvotes:{type: Number, default: 0},
+    goodsLocation: String
+},{versionKey:false},
+{ collection: "goods" });
 
- Manage Goods page
-    ✓ allows the deliveryman of a good to be upvoted (8199ms)
-    ✓ allows a good to be edited (5530ms)
-    ✓ allows a good to be deleted (4206ms)
+let SenderSchema = new mongoose.Schema({
+    senderMethod:String,
+    sendersName: String,
+    senderPhoneNumber: String,
+    senderAddress: String,
+    postcode:String,
+    sendDate:String
+},{versionKey:false},{unique:false},
+{ collection: "senders" });
+SenderSchema.set("autoIndex", false);
 
- ADD good page
-    ✓ allows a valid good to be submitted (5206ms)
-    ✓ shows error messages for incomplete form fields (2830ms)
-
-  About us page
-    ✓ Shows a header and information in about us page (2473ms)
-    ✓ show the picture in the page (1356ms)
-    ✓ Redirects when links are clicked (459ms)
-    Information in the page
-      ✓ Shows the information about how to contact author (435ms)
-
- Contact us page
-    ✓ Shows a header and Words in contact us page (2359ms)
-    Information in the page
-      ✓ Shows the information about how to contact author (1465ms)
-
- Login page
-    ✓ Shows a header in about us page (10080ms)
-    Test login ways in the page
-      ✓ Shows login ways (2065ms)
-
-
-      Spec                                                Tests  Passing  Failing  Pending  Skipped 
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ ✔ aboutUs.spec.js                           00:05        4        4        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔ addGood.spec.js                           00:06        2        2        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔ contactUs.spec.js                         00:04        2        2        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔ home-page.spec.js                         00:06        3        3        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔ login.spec.js                             00:07        2        2        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔ searchGoods.spec.js                       00:20        3        3        -        -        - │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    All specs passed!                           00:51       16       16        -        -        -  
-
+let ReceiverSchema = new mongoose.Schema({
+    receiverName: String,
+    receiverPhoneNumber: String,
+    receiverCountry:String,
+    receiverAddress:String,
+    postcode:String
+},{versionKey:false},{unique:false},
+{ collection: "receivers" });
 ```
